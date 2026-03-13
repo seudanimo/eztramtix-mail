@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include pretix_custommail/templates *
+recursive-include pretix_custommail/static *
