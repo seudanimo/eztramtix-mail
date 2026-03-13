@@ -19,7 +19,7 @@ class PluginApp(PluginConfig):
         )
         visible = True
         version = __version__
-        compatibility = "2025.7.0"
+        compatibility = "2026.2.0"
         level = PLUGIN_LEVEL_EVENT
 
     def ready(self):
