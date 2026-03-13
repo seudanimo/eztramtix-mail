@@ -23,7 +23,7 @@ classifiers = [
 ]
 
 [project.entry-points."pretix.plugin"]
-pretix_custommail = "pretix_custommail.apps:CustomMailApp"
+pretix_custommail = "pretix_custommail.apps:PluginApp"
 
 [tool.setuptools]
 include-package-data = true

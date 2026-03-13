@@ -1,10 +1,12 @@
-from django.apps import AppConfig
 from django.utils.translation import gettext_lazy
+
+from pretix.base.plugins import PluginConfig
+from pretix.base.plugins import PLUGIN_LEVEL_EVENT
 
 from . import __version__
 
 
-class CustomMailApp(AppConfig):
+class PluginApp(PluginConfig):
     name = "pretix_custommail"
     verbose_name = "Pretix Custom Mail"
 
@@ -18,6 +20,7 @@ class CustomMailApp(AppConfig):
         visible = True
         version = __version__
         compatibility = "2025.7.0"
+        level = PLUGIN_LEVEL_EVENT
 
     def ready(self):
         from . import signals  # NOQA
